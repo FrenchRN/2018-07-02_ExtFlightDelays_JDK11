@@ -96,7 +96,7 @@ public class ExtFlightDelaysDAO {
 
 	public void getVertici(Double dist, Map<Integer, Airport> idMap) {
 		final String sql = "SELECT a1.ID as id1,a1.IATA_CODE as ia1,a1.AIRPORT as ai1,a1.CITY as ci1,a1.STATE as st1,a1.COUNTRY as co1,a1.LATITUDE as lat1,a1.LONGITUDE as lon1,a1.TIMEZONE_OFFSET as ti1, " + 
-				"			a2.ID as id2,a2.IATA_CODE as ia2,a2.AIRPORT as ai2,a2.CITY as ci2,a2.STATE as st2,a2.COUNTRY as co2,a2.LATITUDE as lat2,a2.LONGITUDE as lon2,a2.TIMEZONE_OFFSET as ti2" + 
+				"			a2.ID as id2,a2.IATA_CODE as ia2,a2.AIRPORT as ai2,a2.CITY as ci2,a2.STATE as st2,a2.COUNTRY as co2,a2.LATITUDE as lat2,a2.LONGITUDE as lon2,a2.TIMEZONE_OFFSET as ti2 " + 
 				"FROM flights, airports AS a1, airports AS a2 " + 
 				"WHERE flights.ORIGIN_AIRPORT_ID > flights.DESTINATION_AIRPORT_ID AND flights.ORIGIN_AIRPORT_ID = a1.ID " + 
 				"		AND flights.DESTINATION_AIRPORT_ID = a2.ID " + 
