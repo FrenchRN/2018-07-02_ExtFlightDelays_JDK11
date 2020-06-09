@@ -29,6 +29,7 @@ public class Model {
 		grafo = new SimpleWeightedGraph<>(DefaultWeightedEdge.class);
 		idMap = new HashMap<>();
 		dao.getVertici(dist,idMap);
+		Graphs.addAllVertices(this.grafo, idMap.values());
 		for(Arco a : this.dao.getArchi(dist,idMap)) {
 			DefaultWeightedEdge edge = this.grafo.getEdge(a.getA1(), a.getA2());
 			if(edge == null)
